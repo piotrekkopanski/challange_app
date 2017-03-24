@@ -11,7 +11,6 @@
   - if can? :update, @question
   .links
     = link_to 'Edit', edit_question_path(@question)
-    '  |
     = link_to 'Delete', question_path(@question, method: :delete)
   - else 
    'not can
