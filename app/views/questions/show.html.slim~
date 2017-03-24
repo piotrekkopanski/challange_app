@@ -17,7 +17,7 @@
    'not can
     
   
- h3 Answers
+  h3 Answers
 
   - if @question.answers.any?
     = render @question.answers
