@@ -30,6 +30,11 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 group :development do
   gem 'spring'
 end
+ 
+#production
+group :production do
+  gem 'pg'
+end
 
 # testing
 group :test do
