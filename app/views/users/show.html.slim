@@ -1,5 +1,13 @@
 .user id="user-#{@user.id}"
   h2= @user
+  p
+  = @user.name
+  br
+  'points:
+  = @user.points
+  - if @user.avatar.url.present?
+    = image_tag(@user.avatar.url) 
+    
 
   .questions
     h3 Questions
@@ -18,3 +26,15 @@
         = render 'answer', answer: answer
     - else
       '  This user has not added any answers.
+  p
+  'Points
+  =@user.points
+  
+  
+  -if @user.points >= 125
+   =image_tag("badge.jpg",size: "560x560")
+  -else
+   '
+
+
+

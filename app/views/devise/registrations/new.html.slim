@@ -14,6 +14,15 @@ h1 Sign up
   .field
     label= f.label :password_confirmation
     = f.password_field :password_confirmation, autocomplete: 'off'
+  
+  .field
+    label= f.label :name
+    = f.text_field :name
+
+  .field
+    label= f.label :avatar
+    = f.file_field :avatar
+
 
   div
     = f.submit "Sign up"

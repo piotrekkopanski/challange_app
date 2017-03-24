@@ -1,0 +1,21 @@
+table
+thead
+  tr
+      th Name
+      th Revenue
+      th etc.
+  tbody
+
+
+  -@users.sort_by{ |t| t.points }.each do | user|
+     
+   tr
+        td=  user.email 
+        td=  user.name 
+        td=  user.points 
+        td= link_to 'Show',  user 
+        
+        td= link_to 'Destroy',  user, method: :delete, data: { confirm: 'Are you sure?' } 
+   
+  end
+

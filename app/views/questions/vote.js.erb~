@@ -1,0 +1,2 @@
+<% if current_user.liked? @answer %>
+   $('.likes-count').html("<%=@answer.get_upvotes.size %>")

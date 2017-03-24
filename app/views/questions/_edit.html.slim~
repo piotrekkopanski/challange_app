@@ -1,0 +1,6 @@
+= form_for [@question, @answer] do |f|
+   
+           .field
+            
+            = f.check_box :accept
+            .actions= f.submit 'Save'

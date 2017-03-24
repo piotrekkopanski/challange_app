@@ -1,0 +1,16 @@
+h1 Editing question
+
+== render 'form'
+= form_for [@question, @answer]  do |f|
+   
+           .field
+            = f.label :contents
+            = f.text_area :contents
+            = f.check_box :accept
+            .actions= f.submit 'Save'
+
+= link_to 'Show', @question
+'|
+= link_to 'Back', questions_path
+  
+

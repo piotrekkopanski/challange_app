@@ -1,0 +1,6 @@
+
+
+ //updated the below lines in both upvote.js.erb and downvote.js.erb
+$('#<%=@answer.id%>').html('<%=  @answer.get_upvotes.count  %>');
+$('.unlike-count').html('<%=  @answer.get_upvotes.count  %>');
+

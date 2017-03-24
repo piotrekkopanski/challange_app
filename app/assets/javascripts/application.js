@@ -12,5 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.purr
+//= require best_in_place
 //= require turbolinks
 //= require_tree .
+$(function() {
+    $(document).on('click', '.myCheckbox', function(e){
+       location.reload();
+    });
+});

@@ -1,0 +1,5 @@
+
+$('.like').removeClass('loading');
+ //updated the below lines in both upvote.js.erb and downvote.js.erb
+$('.like-count {#answer.id}').html('<%=  @answer.get_upvotes.count  %>');
+$('.unlike').html('<%=  @answer.get_upvotes.count  %>');

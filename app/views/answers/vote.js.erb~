@@ -1,0 +1,3 @@
+$('.vote').html('<%=@answer.get_upvotes.size %>')
+
+

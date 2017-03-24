@@ -1,0 +1,22 @@
+<table>
+  <thead>
+    <tr>
+      <th>email</th>
+      <th>Points</th>
+      <th>Name</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.sort_by{ |t| t.points }.each do | user| %>
+      <tr>
+        <td><%=  user.email %></td>
+        <td><%=  user.name %></td>
+        <td><%=  user.points %></td>
+        <td><%= link_to 'Show',  user %></td>
+        <td><%= link_to 'Destroy',  user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

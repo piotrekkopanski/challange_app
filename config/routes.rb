@@ -1,14 +1,19 @@
 Rails.application.routes.draw do
-  devise_for :users
-
-  root to: 'questions#index'
+  devise_for :users , controllers: { :registration => "application",omniauth_callbacks: "omniauth_callbacks"}
 
   resources :questions do
-    resources :answers, only: [:create]
+      
+    resources :answers , only: [:create,:edit,:update,:destroy] do
+   member do
+         put "like", to: "answers#upvote"
+         put "unlike", to: "answers#downvote"
+    end
+   
+    end 
   end
 
-  resources :users, only: [:show]
-
+  resources :users, only: [:show,:index]
+ root 'questions#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

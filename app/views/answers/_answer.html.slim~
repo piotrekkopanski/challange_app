@@ -1,0 +1,47 @@
+.answer id="answer-#{answer.id}"
+  .contents=  markdown(answer.contents)
+  - if can? :update, @question
+    - if @table.include? true
+     '
+    - else
+     .accept
+     '
+     .myCheckbox=  best_in_place  [@question, answer], :accept,as: :checkbox,:collection => [raw("&#x2610;"), raw("&#x2611;")]
+  -else
+   'You not can accept answer
+
+  .details
+     
+     
+     = link_to 'LIKE', like_question_answer_path( answer.question,answer), class: "like", method: :put,remote: true 
+     p
+     = link_to 'NOTLIKE', unlike_question_answer_path( answer.question,answer), class: "like", method: :put,remote: true
+     
+     div id=answer.id = answer.get_upvotes.count
+     p
+     
+     
+     '  Answered on
+     = l(answer.created_at, format: :long)
+     '  by
+     = link_to answer.user, user_path(answer.user)
+
+     - if answer.accept == true
+        'ACCEPTED
+     - else
+        'NOT ACCEPTED
+    
+    
+
+ 
+     
+  
+  
+
+
+
+ 
+     
+   
+
+

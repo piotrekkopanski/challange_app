@@ -1,0 +1,6 @@
+.question id="question-#{question.id}"
+  .title= question.title
+  
+  .details
+    '  Created on
+    = l(question.created_at, format: :long)

@@ -1,0 +1,9 @@
+$(document).on('click', '.myCheckbox', function(e){
+       <% @question.answers.each do |answer|%>
+     <% if answer.accept == true %>
+        WelcomeMailer.notification_answer(@question).deliver
+     <% else %>
+
+     end
+    end   
+    });

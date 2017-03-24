@@ -1,6 +1,8 @@
 class QuestionsController < ApplicationController
+  
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
-  before_action :set_question, only: [:show, :edit, :update, :destroy]
+  before_action :set_question, only: [:show, :edit, :update, :destroy ]
+  
 
   def index
     @questions = Question.all
@@ -8,6 +10,8 @@ class QuestionsController < ApplicationController
 
   def show
     @answer = Answer.new
+    @answers = @question.answers
+    @table= @answers.map { |answer| answer.accept}
   end
 
   def new
@@ -16,7 +20,7 @@ class QuestionsController < ApplicationController
 
   def edit
   end
-
+  
   def create
     @question = Question.new(question_params)
     @question.user = current_user
@@ -27,20 +31,17 @@ class QuestionsController < ApplicationController
       render :new
     end
   end
-
+ 
   def update
-    if @question.update(question_params)
-      redirect_to @question, notice: 'Question was successfully updated.'
-    else
-      render :edit
-    end
+    @question = Question.find(params[:id])
+    @question.update(question_params)
+    respond_with @question
   end
 
   def destroy
     @question.destroy
     redirect_to questions_url, notice: 'Question was successfully destroyed.'
   end
-
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_question
@@ -49,6 +50,6 @@ class QuestionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def question_params
-      params.require(:question).permit(:title, :contents)
+      params.require(:question).permit(:title, :contents,:answer_id)
     end
 end

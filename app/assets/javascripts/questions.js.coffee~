@@ -1,0 +1,10 @@
+jQuery ->
+    $('.best_in_place').best_in_place();
+
+
+    // call the method on button click:
+    $(document).on('click', '#button', function(e){
+       e.preventDefault();
+       refresh();
+    });
+
