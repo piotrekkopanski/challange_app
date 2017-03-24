@@ -32,6 +32,8 @@ group :development do
 end
  
 #production
+gem 'thin'
+
 gem 'rails_12factor'
 group :production do
   gem 'pg'
