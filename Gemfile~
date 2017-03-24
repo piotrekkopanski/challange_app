@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 # core
 gem 'rails', '4.1.1'
-gem 'sqlite3'
+gem 'sqlite3', :group => [:development, :test]
 gem 'devise'
 gem 'cancan', '~> 1.6', '>= 1.6.10'
 gem 'acts_as_votable', '~> 0.10.0'

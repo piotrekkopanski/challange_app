@@ -1,14 +1,3 @@
 jQuery ->
     $('.best_in_place').best_in_place();
-$(document).on 'click', '.details [data-method=put]', ->
-  $(this).parent('form').submit();
-  
 
-# alternatively:
-
-ready = ->
-  $(document).on 'click', '.details [data-method=put]', ->
-    $(this).parent('form').submit()
-
-$(document).ready(ready)
-$(document).on('page:load', ready)

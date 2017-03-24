@@ -35,6 +35,7 @@ end
 group :production do
   gem 'pg'
 end
+gem 'pg'
 
 # testing
 group :test do
