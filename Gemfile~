@@ -27,9 +27,11 @@ gem 'redcarpet', '~> 3.4'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # development
-group :development do
-  gem 'spring'
+group :development, :test do
+gem  'sqlite3', ' ~> 1.3.13'
+gem 'spring'
 end
+
  
 #production
 group :production do
