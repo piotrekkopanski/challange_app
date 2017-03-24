@@ -20,5 +20,5 @@ header
     '  |
     = link_to "Sign up", new_user_registration_path
     '
-    = link_to "Sign in github", user_omniauth_authorize_path(:github)
+    = link_to "Sign in github", user_github_omniauth_authorize_path
 
