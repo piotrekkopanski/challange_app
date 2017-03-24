@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 # core
 gem 'rails', '4.1.1'
-gem 'sqlite3'
+
 gem 'devise'
 gem 'cancan', '~> 1.6', '>= 1.6.10'
 gem 'acts_as_votable', '~> 0.10.0'
@@ -27,11 +27,10 @@ gem 'redcarpet', '~> 3.4'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # development
-group :development, :test do
-gem  'sqlite3'
-gem 'spring'
+group :development do
+  gem 'sqlite3'
+  gem 'spring'
 end
-
  
 #production
 group :production do
