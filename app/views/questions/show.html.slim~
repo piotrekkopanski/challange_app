@@ -19,7 +19,7 @@
   
   
   
-  .answer h3 Answers
+  
 
   - if @question.answers.any?
     = render @question.answers
