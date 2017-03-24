@@ -32,6 +32,7 @@ group :development do
 end
  
 #production
+gem 'rails_12factor'
 group :production do
   gem 'pg'
 end
