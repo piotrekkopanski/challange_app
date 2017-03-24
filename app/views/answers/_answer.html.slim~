@@ -24,7 +24,7 @@
      '  Answered on
      = l(answer.created_at, format: :long)
      '  by
-     = link_to answer.user, user_path(answer.user)
+     = answer.user
 
      - if answer.accept == true
         'ACCEPTED
