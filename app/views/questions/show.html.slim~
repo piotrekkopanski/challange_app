@@ -40,7 +40,6 @@
             = f.text_area :contents
             .actions= f.submit 'Save'
 
-  button id="button" then Reload page with this button!
 
 
   
