@@ -7,7 +7,7 @@ class Answer < ActiveRecord::Base
  
  after_create :notification
   def notification
-   UserMailer.signup_confirmation(self).deliver
+   UserMailer.notification(self).deliver
   end
   
 end
