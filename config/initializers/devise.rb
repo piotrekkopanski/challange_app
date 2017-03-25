@@ -232,7 +232,7 @@ Devise.setup do |config|
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
-   config.omniauth :github, 'dea0d5d327b5878c81a0', '6e1ba8c9f213dee4bf5875eff504b37f6e8afc04', :scope => 'user:email'
+   config.omniauth :github, 'b66912ac6e82e70d7edf', 'c94e0f9d52c42017224a14fc2b34efcc9ce91d1b', :scope => 'user:email'
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
