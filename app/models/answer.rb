@@ -7,7 +7,7 @@ class Answer < ActiveRecord::Base
  
  after_create :notification
   def notification
-   UserMailer.notification(@question).deliver
+   UserMailer.notification(self).deliver
   end
   
 end
