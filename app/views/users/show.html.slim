@@ -6,7 +6,7 @@
   'points:
   = @user.points
   - if @user.avatar.url.present?
-    = image_tag(@user.avatar.url) 
+    = image_tag @user.avatar, class: "img-responsive" 
     
 
   .questions

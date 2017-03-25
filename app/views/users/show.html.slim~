@@ -35,8 +35,6 @@
    =image_tag("badge.jpg",size: "560x560")
   -else
    '
-  - @users.each do | user| 
-   =  user.points 
-   p
+
 
 
