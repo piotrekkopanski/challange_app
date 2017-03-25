@@ -5,7 +5,6 @@ class UsersController < ApplicationController
  
   
   def show
-   @user = User.find_by(id: params[:user_id])
    @user.points = 100
    @user.save
    @question = Question.find_by_id(params[:id])
