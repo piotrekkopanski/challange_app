@@ -30,7 +30,8 @@ h2 Edit Profile
   .field
     label= f.label :avatar
     = f.file_field :avatar
-    
+
+  .delete
    =button_to "Usuń moje konto", registration_path(resource_name), data: { confirm: "Jesteś pewien?" }, method: :delete
 
   div
