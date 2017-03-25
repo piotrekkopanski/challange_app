@@ -31,10 +31,9 @@ h2 Edit Profile
     label= f.label :avatar
     = f.file_field :avatar
 
-  .delete  
-  =button_to "Usuń moje konto", registration_path(resource_name), data: { confirm: "Jesteś pewien?" }, method: :delete
+  .delete
+   =button_to "Usuń moje konto", registration_path(resource_name), data: { confirm: "Jesteś pewien?" }, method: :delete
 
-  .update
   div
     = f.submit "Update"
 
