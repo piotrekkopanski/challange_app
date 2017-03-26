@@ -15,6 +15,6 @@
   .details
    '  Answered on
    = l(answer.created_at, format: :long)
-   = link_to answer.user,users_path(answer.user)
+   = answer.user
 
   
