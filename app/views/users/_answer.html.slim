@@ -1,5 +1,4 @@
 .answer id="answer-#{answer.id}"
-  .question-title= link_to answer.question, question_path(answer.question)
   .contents= answer.contents
   = answer.get_upvotes.count
   '<-----like count
