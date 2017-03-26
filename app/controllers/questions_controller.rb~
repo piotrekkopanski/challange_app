@@ -9,7 +9,6 @@ class QuestionsController < ApplicationController
   end
 
   def show
-     @question = Question.find_by(id: params[:question_id]) 
     @answer = Answer.new
     @answers = @question.answers
     @table= @answers.map { |answer| answer.accept}
