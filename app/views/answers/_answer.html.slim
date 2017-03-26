@@ -15,7 +15,7 @@
      
      = link_to 'LIKE', like_question_answer_path( answer.question,answer), class: "like", method: :put,remote: true 
      p
-     = link_to 'NOTLIKE', unlike_question_answer_path( answer.question,answer), class: "like", method: :put,remote: true
+     = link_to 'UNLIKE', unlike_question_answer_path( answer.question,answer), class: "like", method: :put,remote: true
      
      div id=answer.id = answer.get_upvotes.count
      p
@@ -24,7 +24,8 @@
      '  Answered on
      = l(answer.created_at, format: :long)
      '  by
-     = answer.user
+     = link_to answer.user, user_path(answer.user)
+
 
      - if answer.accept == true
         'ACCEPTED

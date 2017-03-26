@@ -29,7 +29,7 @@
      - if answer.accept == true
         'ACCEPTED
      - else
-        'NOT ACCEPTED--
+        'NOT ACCEPTED
     
     
 
