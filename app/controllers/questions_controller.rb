@@ -35,7 +35,7 @@ class QuestionsController < ApplicationController
   def update
     @question = Question.find(params[:id])
     @question.update(question_params)
-    redirect_to @question, notice: 'Question was successfully updated.'
+    respond_with @question
   end
 
   def destroy
