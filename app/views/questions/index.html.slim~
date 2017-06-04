@@ -3,11 +3,11 @@ h1 Questions
 table
  thead
     tr
-      th= "#"
-      th= "Pytanie"
-      th= "Usuń"
-      th= "Zadane:"
-      th= "Zadane przez:"
+      th= "ll"
+      th= "lll"
+      th= "00"
+      th= "08"
+      th= " 87"
  tbody
     - @questions.each do |question|
       tr

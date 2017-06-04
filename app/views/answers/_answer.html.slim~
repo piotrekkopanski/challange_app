@@ -1,34 +1,33 @@
 .answer id="answer-#{answer.id}"
-  .contents=  markdown(answer.contents)
+div.row
+  div.col-md-2=  markdown(answer.contents)
   - if can? :update, @question
     - if @table.include? true
      '
     - else
-     .accept
-     '
-     .myCheckbox=  best_in_place  [@question, answer], :accept,as: :checkbox,:collection => [raw("&#x2610;"), raw("&#x2611;")]
+     div.col-md-1=  best_in_place  [@question, answer], :accept,as: :checkbox,:collection => [raw("&#x2610;"), raw("&#x2611;")]
   -else
    'You not can accept answer
-
-  .details
-     
-     
+  div.col-md-1
      = link_to 'LIKE', like_question_answer_path( answer.question,answer), class: "like", method: :put,remote: true 
      p
-     = link_to 'NOTLIKE', unlike_question_answer_path( answer.question,answer), class: "like", method: :put,remote: true
+  div.col-md-1
+     = link_to 'UNLIKE', unlike_question_answer_path( answer.question,answer), class: "like", method: :put,remote: true
      
-     div id=answer.id = answer.get_upvotes.count
+  div.col-md-1 id=answer.id = answer.get_upvotes.count
      p
-     
-     
-     '  Answered on
-     = l(answer.created_at, format: :long)
-     '  by
-     = answer.user
-
-     - if answer.accept == true
+  div.col-md-2 
+    '  Answered on
+    div.col-md-12
+      = l(answer.created_at, format: :long)
+  div.col-md-1
+    '  by
+    div.col-md-12
+      = link_to answer.user, user_path(answer.user)
+  div.col-md-3
+      - if answer.accept == true
         'ACCEPTED
-     - else
+      - else
         'NOT ACCEPTED
     
     

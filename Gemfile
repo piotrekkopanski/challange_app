@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby '2.1.5'
 # core
 gem 'rails', '4.1.1'
-gem 'sqlite3', :group => [:development, :test]
+gem 'sqlite3'
 gem 'devise'
 gem 'cancan', '~> 1.6', '>= 1.6.10'
 gem 'acts_as_votable', '~> 0.10.0'
@@ -23,6 +23,10 @@ gem 'jbuilder', '~> 2.0'
 gem 'rake', '~> 12.0'
 gem 'better_errors', '~> 2.1', '>= 2.1.1'
 gem 'redcarpet', '~> 3.4'
+gem 'twitter-bootstrap-rails'
+gem 'devise-bootstrapped'
+gem 'less-rails', '~> 2.8'
+gem 'therubyracer', '~> 0.12.3'
 # doc
 gem 'sdoc', '~> 0.4.0',          group: :doc
 

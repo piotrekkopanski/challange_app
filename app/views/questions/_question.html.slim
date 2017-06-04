@@ -1,4 +1,24 @@
+
 .question id="question-#{question.id}"
   .title= link_to question.title, question_path(question)
   = link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' } 
   = render "questions/details", question: question
+
+table
+ thead
+    tr
+      th= "ll"
+      th= "lll"
+      th= "00"
+      th= "08"
+      th= " 87"
+ tbody
+    - @questions.each do |question|
+      tr
+        td= question.id
+        td= link_to question.title, question_path(question)
+        td= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' }
+        td= l(question.created_at, format: :long)
+        td= link_to question.user, user_path(question.user)
+
+

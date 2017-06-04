@@ -1,17 +1,12 @@
-= form_for @question,remote: :true do |f|
-  - if @question.errors.any?
-    #error_explanation
-      h2 = "#{pluralize(@question.errors.count, "error")} prohibited this question from being saved:"
-      ul
-        - @question.errors.full_messages.each do |message|
-          li = message
-
-  .field
-    = f.label :title
-    = f.text_field :title
-  .field
-    = f.label :contents
-    = f.text_area :contents
-  .actions= f.submit 'Save'
-  
-  
+= simple_form_for @question, :html => { :class => "form-horizontal" } do |f|
+  = f.input :title
+  = error_span(@question[:title])
+  = f.input :contents
+  = error_span(@question[:contents])
+  = f.input :user_id
+  = error_span(@question[:user_id])
+  = f.input :answer_id
+  = error_span(@question[:answer_id])
+  = f.button :submit, :class => 'btn-primary'
+  '
+  = link_to t('.cancel', :default => t("helpers.links.cancel")), questions_path, :class => 'btn btn-default'

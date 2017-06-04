@@ -1,37 +1,42 @@
 .question id="question-#{@question.id}"
-  h2= @question.title
-     
-  = render "details", question: @question
+  div.title1 
+   h2= @question.title
+   = render "details", question: @question
 
-  p 
+  p.description
     = best_in_place @question, :contents
     
   
   .can
   - if can? :update, @question
-    = link_to 'Edit', edit_question_path(@question)
-    = link_to 'Delete', question_path(@question, method: :delete)
+    = button_to 'Edit', edit_question_path(@question), "class"=>"button"
+    p
+    = button_to 'Delete', question_path(@question, method: :delete),"class"=>"button"
 
   - else 
     'not can
   
-  .answer h3 Answers
+  .title2
+    h2 Answers
 
   - if @question.answers.any?
     = render @question.answers
      
-  - else     
-    '  There are no answers to this question.
+  - else  
+    .title3-1   
+      '  There are no answers to this question.
+
+  .title3
+    h2 Your Answer 
   
-  h3 Accepted Answer 
-   
-  - if @table.include? true
-   'Question have accepted answer 
-   
   
-  - else
-    ' No is not any true answer
-    = form_for [@question, @answer]  do |f|
+    - if @table.include? true
+     'Question have accepted answer 
+    - else
+     ' (No is not any true answer)
+
+  .answerfield
+   = form_for [@question, @answer]  do |f|
    
            .field
             = f.label :contents
@@ -40,5 +45,3 @@
 
 
 
-  
-  
