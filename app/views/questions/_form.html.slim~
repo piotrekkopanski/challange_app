@@ -14,5 +14,5 @@ div.row
       .field
         = f.label :contents
         = f.text_area :contents
-      .actions= f.submit 'Save'
+      .actions= f.submit 'Save', "id" => "submit-q"
   

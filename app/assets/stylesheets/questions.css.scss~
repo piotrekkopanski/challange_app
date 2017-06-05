@@ -142,6 +142,11 @@ background-color: #E4E4EC;
      background-color: aqua;
      
 }
+.row :hover{
+     color: blue;
+     background-color: aqua;
+     
+}
 
 .description {
     text-align: center;
@@ -208,11 +213,18 @@ div.row {
   text-align: center;
   font-style: normal;
   border-radius: 5px;
-  width: 80%;
+  width: 77%;
   border: 1px solid #3ac162;
   border-width: 1px 1px 3px;
   box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
   margin-bottom: 10px;
+}
+
+
+.title2 :hover{
+     color: blue;
+     background-color: aqua;
+     
 }
 
 

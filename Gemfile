@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby '2.1.5'
 # core
 gem 'rails', '4.1.1'
-gem 'sqlite3',:group => [:development, :test]
+gem 'sqlite3'
 gem 'devise'
 gem 'cancan', '~> 1.6', '>= 1.6.10'
 gem 'acts_as_votable', '~> 0.10.0'
@@ -52,6 +52,9 @@ group :test do
   gem "factory_girl_rails", "~> 4.2.0"
   gem "cucumber-rails",     "~> 1.4.1", require: false
   gem "factory_girl"
-  gem "rspec-rails"
+  gem "rspec-rails",:group => [:test, :development]
+  gem 'launchy', '~> 2.4', '>= 2.4.3'
+  gem 'shoulda-matchers', '~> 3.1', '>= 3.1.1'
+   gem 'faker'
 end
 

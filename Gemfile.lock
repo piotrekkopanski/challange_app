@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: git://github.com/jnicklas/capybara.git
-  revision: 8f5f55af895d67c4b58503050e8e782b265ad2b1
+  revision: 094fe513d145721346fd4c816d631d9c1e78e1ae
   specs:
     capybara (2.14.0)
       addressable
@@ -108,6 +108,8 @@ GEM
     factory_girl_rails (4.2.1)
       factory_girl (~> 4.2.0)
       railties (>= 3.0.0)
+    faker (1.7.3)
+      i18n (~> 0.5)
     faraday (0.11.0)
       multipart-post (>= 1.2, < 3)
     gherkin (4.1.3)
@@ -122,6 +124,8 @@ GEM
       thor (>= 0.14, < 2.0)
     json (1.8.6)
     jwt (1.5.6)
+    launchy (2.4.3)
+      addressable (~> 2.3)
     less (2.6.0)
       commonjs (~> 0.2.7)
     less-rails (2.8.0)
@@ -222,6 +226,8 @@ GEM
     sdoc (0.4.2)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    shoulda-matchers (3.1.1)
+      activesupport (>= 4.0.0)
     simple_form (3.5.0)
       actionpack (> 4, < 5.2)
       activemodel (> 4, < 5.2)
@@ -294,8 +300,10 @@ DEPENDENCIES
   devise-bootstrapped
   factory_girl
   factory_girl_rails (~> 4.2.0)
+  faker
   jbuilder (~> 2.0)
   jquery-rails
+  launchy (~> 2.4, >= 2.4.3)
   less-rails (~> 2.8)
   mini_magick (~> 4.6, >= 4.6.1)
   omniauth-github (~> 1.1, >= 1.1.2)
@@ -308,6 +316,7 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
+  shoulda-matchers (~> 3.1, >= 3.1.1)
   simple_form (~> 3.4)
   slim-rails
   spring
