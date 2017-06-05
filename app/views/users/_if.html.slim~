@@ -1,0 +1,4 @@
+  - if  @answer.accept == true
+    'ACCEPTED answer
+  - else
+    ' No is not accepd

@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :set_user, only: [:show, :edit, :update, :destroy,:if,:_if]
   before_action :set_user_in_index, only: [:index]
    
  
@@ -46,15 +46,6 @@ class UsersController < ApplicationController
      end
      end 
    end
-
-   def edit
-   end
-
-  def update
-    @user = User.find(params[:id])
-    @user.update(user_params)
-    respond_with @user
-  end
   
 
   private

@@ -148,7 +148,7 @@ background-color: #E4E4EC;
     text-shadow: 2px 2px #CAB6C3;
 }
 
-.button_to {
+.button {
     margin-left: 600px;
 }
 
@@ -175,3 +175,44 @@ div.row {
 .answerfield {
     text-align: center;
 }
+
+#titlefield {
+    padding-right: 227px;
+}
+
+#submit-q {
+    background-color: #1ED2CA;
+}
+
+.head1 {
+    font-size: x-large;
+    font-family: cursive;
+}
+
+#signin {
+  font-family: Vow;
+   
+}
+
+#user_email{
+    background-color: azure;
+}
+#user_password{
+    background-color: azure;
+}
+#button2{
+    padding: 19px 39px 18px 39px;
+  color: #FFF;
+  background-color: #4bc970;
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  border-radius: 5px;
+  width: 80%;
+  border: 1px solid #3ac162;
+  border-width: 1px 1px 3px;
+  box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+  margin-bottom: 10px;
+}
+
+

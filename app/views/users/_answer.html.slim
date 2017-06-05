@@ -1,19 +1,14 @@
-.answer id="answer-#{answer.id}"
-  .contents= answer.contents
-  = answer.get_upvotes.count
-  '<-----like count
-   
-  - if  answer.accept == true
+  div.col-md-1 id="answer-#{answer.id}"
+  
+  div.col-md-2= answer.contents
+  div.col-md-1= answer.get_upvotes.count
+  div.col-md-2
+    - if  answer.accept == true
        'ACCEPTED answer
       
-  - else
+    - else
        ' No is not accepted
-
-
-  
-  .details
-   '  Answered on
-   = l(answer.created_at, format: :long)
-   = answer.user
+  div.col-md-2= l(answer.created_at, format: :long)
+  div.col-md-4= answer.user
 
   

@@ -1,14 +1,17 @@
-h2 Sign in
+div.row id="signin"
+  div.col-md-3
+  dic.col-md-4
+    h2 Sign in
 
-= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-  .field
-    = f.label :email
-    = f.email_field :email, autofocus: true
-
-  .field
-    = f.label :password
-    = f.password_field :password, autocomplete: "off"
-
-  div
-    = f.submit "Sign in"
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+     .field
+        = f.label :email
+        = f.email_field :email, autofocus: true
+  
+     .field
+        = f.label :password
+        = f.password_field :password, autocomplete: "off"
+  
+        hr
+        = f.submit "Sign in"
   

@@ -1,15 +1,21 @@
 .user id="user-#{@user.id}"
-  h2= @user
-  p
-  = @user.name
-  br
-  'points:
-  = @user.points
-  - if @user.avatar.url.present?
-    = image_tag(@user.avatar.url,class: :thumb )
+div.row
+  div.col-md-2
+    h2= @user
+    p
+  div.col-md-2
+    = @user.name
+    br
+  div.col-md-2
+    'points:
+    = @user.points
+  div.col-md-6
+    - if @user.avatar.url.present?
+     = image_tag(@user.avatar.url)
+    hr
     
 
-  .questions
+  .title2
     h3 Questions
 
     - if @user.questions.any?
@@ -18,17 +24,29 @@
     - else
       '  This user has not created any questions.
 
-  .answers
+
     h3 Answers
+    
+    
 
     - if @user.answers.any?
+      .head1
+        div.col-md-1 
+        div.col-md-2 Answer
+        div.col-md-1 count
+        div.col-md-2 Status
+        div.col-md-2 Data
+        div.col-md-4 by
+      br
+      hr
+      hr
+      
+      
       - @user.answers.each do |answer|
         = render 'answer', answer: answer
     - else
       '  This user has not added any answers.
-  p
-  'Points
-  =@user.points
+ 
   
   
   -if @user.points >= 125
